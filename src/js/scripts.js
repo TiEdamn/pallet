@@ -10,9 +10,9 @@ $(document).ready(function() {
         }
     });
 
-    var owl = $('.owl-slider');
+    $('input[name="phone"]').inputmask('+375 (99) 999-99-99');
 
-    owl.owlCarousel({
+    $('.owl-slider').owlCarousel({
         loop: true,
         items: 1,
         nav: false,
@@ -23,6 +23,21 @@ $(document).ready(function() {
         onInitialized: dotNumbers,
         onRefreshed: sliderAnimation,
         onTranslated: sliderAnimation
+    });
+
+    $('.popup-with-form').magnificPopup({
+        type: 'inline',
+        preloader: false,
+        focus: '#name',
+        callbacks: {
+            beforeOpen: function() {
+                if ($(window).width() < 768) {
+                    this.st.focus = false;
+                } else {
+                    this.st.focus = '#name';
+                }
+            }
+        }
     });
 });
 
