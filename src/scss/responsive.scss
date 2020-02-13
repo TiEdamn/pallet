@@ -1,1 +1,116 @@
 @import './template/variable';
+
+@media (max-width: 991px) {
+    #product {
+        .row {
+            .col-md-6 {
+                h2 {
+                    font-size: $h4;
+                }
+                p {
+                    padding-right: 0;
+                    &:after {
+                        top: -15px;
+                    }
+                }
+                a {
+                    margin-right: 0;
+                }
+                &.order-md-0 {
+                    p {
+                        padding-left: 0;
+                    }
+                    a {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    #slider {
+        h1 {
+            font-size: 60px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 7px 0;
+        .logo {
+            img {
+                max-height: 25px;
+            }
+        }
+        .contact {
+            display: none;
+        }
+    }
+    #product {
+        .row {
+            .col-md-6 {
+                text-align: left;
+                .number {
+                    &:before {
+                        right: auto;
+                        left: 0;
+                    }
+                }
+                p {
+                    &:after {
+                        right: auto;
+                        left: 0;
+                    }
+                }
+                img {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    #slider {
+        h4 {
+            font-size: 20px;
+        }
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 300px;
+            margin: 0 auto 30px;
+        }
+        .owl-slider {
+            .row {
+                height: auto;
+            }
+        }
+        p {
+            font-size: $small;
+        }
+        a {
+            margin-left: 10px;
+        }
+        .owl-dots {
+            flex-direction: row;
+            height: auto;
+            width: 100%;
+            top: auto;
+            bottom: 0;
+            .owl-dot {
+                font-size: 20px;
+                position: relative;
+                margin: 5px;
+                &:after {
+                    content: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    footer {
+        font-size: $small;
+    }
+}
