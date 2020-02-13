@@ -1,0 +1,57 @@
+@import './template/variable';
+@import './template/fonts';
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-size: $normal;
+    line-height: 1.55;
+    font-smoothing: antialiased;
+    color: $main;
+}
+
+a,
+button,
+.animated {
+    transition: all 0.4s ease;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+.h1 {
+    font-size: $h1;
+}
+h2,
+.h2 {
+    font-size: $h2;
+}
+h3,
+.h3 {
+    font-size: $h3;
+}
+h4,
+.h4 {
+    font-size: $h4;
+}
+
+h5,
+.h5 {
+    font-size: $h5;
+}
+
+header {
+    width: 100%;
+    position: absolute;
+}
+
+#slider {
+    background: $grey;
+    height: 100vh;
+}
