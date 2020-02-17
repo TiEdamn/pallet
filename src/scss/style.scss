@@ -57,6 +57,11 @@ button,
     }
 }
 
+.ajax_form .error {
+    color: initial !important;
+    border-color: $red;
+}
+
 .mfp-close-btn-in .mfp-close {
     color: $main;
     opacity: 1;
