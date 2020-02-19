@@ -25,25 +25,51 @@ button,
 .btn-primary {
     border-radius: 20px;
     font-size: $normal;
-    border-color: $red;
+    border-color: $blue;
     box-shadow: none !important;
-    background: $red;
+    background: $blue;
     line-height: 44px;
-    padding: 0 10px;
+    padding: 0 20px;
+    font-weight: 600;
     &:active,
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled).active,
     &.disabled,
     &:disabled {
-        background: $red !important;
-        border-color: $red;
+        background: $blue !important;
+        border-color: $blue;
     }
     &:focus {
-        border-color: $red;
+        border-color: $blue;
     }
     &:hover {
-        background: lighten($red, 5%);
-        border-color: lighten($red, 5%);
+        background: lighten($blue, 5%);
+        border-color: lighten($blue, 5%);
+    }
+}
+
+.btn-outline-primary {
+    border-radius: 20px;
+    font-size: $normal;
+    border-color: $blue;
+    box-shadow: none !important;
+    line-height: 44px;
+    padding: 0 20px;
+    font-weight: 600;
+    &:active,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    &.disabled,
+    &:disabled {
+        background: $blue !important;
+        border-color: $blue;
+    }
+    &:focus {
+        border-color: $blue;
+    }
+    &:hover {
+        background: lighten($blue, 5%);
+        border-color: lighten($blue, 5%);
     }
 }
 
@@ -53,7 +79,7 @@ button,
     height: 46px;
     border-radius: 20px;
     &:focus {
-        border-color: $red;
+        border-color: $blue;
     }
 }
 
@@ -100,7 +126,7 @@ h5,
 }
 
 .red {
-    color: $red;
+    color: $blue;
 }
 
 header {
@@ -141,7 +167,7 @@ header {
                     position: relative;
                     top: 2px;
                     margin-right: 5px;
-                    color: $red;
+                    color: $blue;
                 }
             }
         }
@@ -151,7 +177,7 @@ header {
 #slider,
 #product {
     a {
-        color: $red;
+        color: $blue;
         font-weight: 800;
         position: relative;
         text-decoration: none;
@@ -228,9 +254,9 @@ header {
             }
             &:hover,
             &.active {
-                color: $red;
+                color: $blue;
                 &:after {
-                    background: $red;
+                    background: $blue;
                     width: 70px;
                 }
             }

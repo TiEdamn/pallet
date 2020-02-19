@@ -25,6 +25,23 @@ $(document).ready(function() {
         onTranslated: sliderAnimation
     });
 
+    $('body').on('click', '.toggle-contact', function(e) {
+        e.preventDefault();
+
+        $('.contact').toggleClass('active');
+    });
+
+    $(document).mouseup(function(e) {
+        var el = $('header .contact');
+        if (
+            !el.is(e.target) &&
+            el.has(e.target).length === 0 &&
+            !$(e.target).hasClass('toggle-contact')
+        ) {
+            el.removeClass('active');
+        }
+    });
+
     $('.popup-with-form').magnificPopup({
         type: 'inline',
         preloader: false,
