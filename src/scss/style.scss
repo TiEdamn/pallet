@@ -269,6 +269,30 @@ header {
         margin: 100px 0;
         .col-md-6 {
             text-align: right;
+            .circle {
+                position: absolute;
+                border-radius: 50%;
+                background: rgba($blue, 0.1);
+                width: 400px;
+                height: 400px;
+                top: 50%;
+                left: -50px;
+                margin-top: -200px;
+                z-index: -2;
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    border-radius: 50%;
+                    background: rgba($blue, 0.2);
+                    width: 360px;
+                    height: 360px;
+                    top: 50%;
+                    left: 20px;
+                    margin-top: -180px;
+                    z-index: -1;
+                }
+            }
             .number {
                 font-weight: 800;
                 font-size: $h5;
@@ -287,7 +311,11 @@ header {
                 }
             }
             h2 {
+                margin-bottom: 10px;
+            }
+            h5 {
                 margin-bottom: 30px;
+                color: $blue;
             }
             p {
                 padding-right: 90px;
@@ -307,6 +335,16 @@ header {
             a {
                 display: inline-block;
                 margin-right: 90px;
+            }
+            &.order-md-1 {
+                .circle {
+                    left: auto;
+                    right: -50px;
+                    &:after {
+                        left: auto;
+                        right: 20px;
+                    }
+                }
             }
             &.order-md-0 {
                 text-align: left;
