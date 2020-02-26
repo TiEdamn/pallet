@@ -58,6 +58,12 @@ $(document).ready(function() {
     });
 });
 
+$(document).on('af_complete', function(event, response) {
+    if (response.success) {
+        $.magnificPopup.close();
+    }
+});
+
 function sliderAnimation(e) {
     $(e.target)
         .find('.owl-item:not(.active) .animated')
